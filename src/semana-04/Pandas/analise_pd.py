@@ -86,9 +86,19 @@ df_benign = data[data['real_class'] == 'benign']
 menores_prob_benign = df_benign.sort_values(by="prob_benign")
 print(menores_prob_benign.head(5))
 
+'''''
+Indica que o modelo teve dificuldade em reconhecer corretamente essas amostras.
+Isso pode ocorrer por motivos como: ruído, viés de dados de treinamento
+Esses casos indicaram que uma pessoa saudável precisava de intervenções desnecessárias
+'''''
+
 print("="*60)
 print('7. Encontre as 5 imagens "maligno" com a maior probabilidade de serem "benigno" (prob_benign). O que isso pode indicar?')
 
 df_malign = data[data['real_class'] == 'malign']
 maiores_prob_malign = df_malign.sort_values(by="prob_malign")
-print(maiores_prob_malign.tail(5))
+print(maiores_prob_malign.head(5))
+
+'''''
+Indica que o modelo
+'''''
