@@ -88,8 +88,8 @@ print(menores_prob_benign.head(5))
 
 '''''
 Indica que o modelo teve dificuldade em reconhecer corretamente essas amostras.
-Isso pode ocorrer por motivos como: ruído, viés de dados de treinamento
-Esses casos indicaram que uma pessoa saudável precisava de intervenções desnecessárias
+Isso pode ocorrer por motivos como: ruído, viés de dados de treinamento, características visuais atípicas.
+Esses casos levam a falsos positivos, resultando em intervenções médicas desnecessárias
 '''''
 
 print("="*60)
@@ -100,5 +100,6 @@ maiores_prob_malign = df_malign.sort_values(by="prob_malign")
 print(maiores_prob_malign.head(5))
 
 '''''
-Indica que o modelo
+Indica que o modelo classificou, com alto nível de confiança, imagens de tumores malignos como benignos.
+Isso caracteriza um falso negativo, podendo resultar no atraso do diagnóstico e, consequentemente, do tratamento
 '''''
