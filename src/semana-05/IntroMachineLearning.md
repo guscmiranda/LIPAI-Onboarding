@@ -35,4 +35,3 @@ Personalizam sugestões com base no comportamento do usuário. A Netflix usa iss
 
 > 5. Cibersegurança:
 Detecta e previne ameaças à segurança. É aplicada na detecção de transações bancárias incomuns e em sistemas de segurança digital para evitar acessos não autorizados.
-
