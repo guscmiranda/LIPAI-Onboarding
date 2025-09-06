@@ -51,8 +51,18 @@ Explore como foi estruturada a rede neural convolucional proposta pelos autores.
 **Questões que você deve responder:**
 
 - O que é campo receptivo local e qual sua importância em CNNs?
+
+> O campo receptivo local é a parte da imagem à qual um único neurônio está conectado.
+> A importância do campo receptivo local nas CNNs está em reduzir o número de conexões e permitir que a rede encontre padrões locais, que são mais robustos a pequenas variações e deslocamentos.
+
 - Como funciona o compartilhamento de pesos? Por que ele é vantajoso?
+
+> O compartilhamento de pesos faz com que todas as unidades de um feature map usam o mesmo conjuntos de pesos no processamento de diferentes partes da imagem.
+> É vantajoso porque reduz bastante o número de parâmetros, e ainda introduz invariância a deslocamentos. 
+
 - Qual é a função das camadas de subamostragem?
+
+> As camadas de subamostragem realizam uma redução da resolução dos feature maps, por meio de média local e subamostragem. Além disso, essa camada introduz certo nível de invariância a distorções e translações.  
 
 ### Resultados (Seção 5)
 
@@ -66,7 +76,15 @@ Observe como os resultados são apresentados e avaliados pelos autores.
 **Questões que você deve responder:**
 
 - Quais foram os resultados principais obtidos?
+
+> Após 30 passagens de treinamento, a taxa de erro foi de 1.1% no conjunto de treinamento e o erro quadrático médio(MSE) FOI 0.017.
+> No conjunto de testes, a taxa de erro foi de 3.4% e o MSE foi 0.024.
+> Todos os erros de classificação ocorreram em caracteres manuscritos. 
+
 - Qual a importância prática do critério de rejeição?
+
+> Em aplicações realistas, o usuário não tem muito interesse na taxa bruta de erro, mas sim no números de rejeições necessárias para atingir um nível de precisão aceitável. 
+> Nesse caso, para obter 1% de erro, foi necessário rejeitar 5.7% dos padrões no conjunto completo de testes, já no subconjunto de dígitos manuscritos foram 9%.
 
 ### Conclusão (Seção 6)
 
@@ -80,12 +98,10 @@ Reflita sobre as conclusões finais tiradas pelos autores com base nos resultado
 **Questões que você deve responder:**
 
 - Quais vantagens os autores identificaram ao usar CNNs com aprendizado via backpropagation?
+
+> Permite treinar com dados pouco processados, reduz o tempo de aprendizado, escala bem para tarefas maiores, pode ser implementado em hardware comercial de processamento de digital de sinais ("Our results appear to be at the state of the art in handwritten digit recognition").
+
+
 - Por que é importante ter restrições na arquitetura e nos pesos da rede?
 
-## Após a leitura
-
-Prepare-se para discutir os seguintes pontos: 
-
-- Qual foi a importância histórica e prática deste artigo para o desenvolvimento das CNNs?
-- Quais são as diferenças entre as dificuldades enfrentadas pelos autores na época e as que enfrentamos hoje?
-- Como você acha que a arquitetura proposta evoluiu até os dias atuais?
+> Para incorporar reconhecimento da tarefa, melhorar a generalização, reduzir o tempo de treinamento e reduzir o pré-processamento.
